@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+/* Styling som gjelder alle elementer som er inni wrapper */
+.wrapper {
+  text-align: center; 
+  color: #252525;
+  padding: 1px;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Litt color-pimp når tekst blir mouseOver merket */
+::selection {
+  background-color: purple;
+  color:yellow;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p{
+  font-size: 13px;
+  color: #666;
+}
+h1{
+  position: relative;
+  top: 10px;
+}
+/* Store Information */
+.sticky{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  border-bottom: 3px solid aqua;
+  background-color: #252525;
+  z-index: 1;
+  height: 150px;
+}
+/* Stylen på hvert kort */
+.card{ 
+  width: 350px;
+  border: 2px solid #666;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  padding: 15px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style bilde sectionen */
+.section--top{
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+/* Prisen og legg til / fjern knappen */
+.section--buy{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  font-size: 23px;
+}
+
+.section--buy > b,
+img{
+  margin-right: 15px;
+}
+
+/* grid til render av Nettprodukter componenten */
+.grid{
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  row-gap: 15px;
+  margin-top: 30px;
+ 
+  justify-content: center;
+}
+
+/* Styling til den runde div boksen med handlekurv innholdet */
+#handlekurvId{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #666;
+  padding: 10px;
+  border: 2px solid aqua;
+}
+
+/* Handlekurven */
+.theShop{
+  border: 2px solid aqua;
+  border-radius: 20px;
+  padding: 10px;
+  width: 200px;
+  
+  margin-left: 50%;
+  transform: translate(-50%, 20px);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 17px;
+  font-weight: 700;
+  
+}
+
+.Nav-header{
+  
+ 
+  top: 8px;
+  position:fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+
+ 
+}
+.Nav-header > a {
+  border: 1px solid aqua;
+  color: aqua;
+  margin: 20px;
+  text-decoration-line: none;
   color: white;
+  text-shadow: 0px 0px 10px aqua;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 5px;
+ 
+  border-radius: 5px;
+  background-color: #666;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+.strokeBlack{
+  color:aqua;
+  -webkit-text-stroke: 1px #252525;
+}
+.strokeWhite{
+  -webkit-text-stroke: 0.5px #f1f1f1;
+  color:aqua;
+}
+/* inside the "Router" handlekurv */
+.handlekurv--list{
+ 
+  margin-bottom: 10px;
+  width: 550px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  background-color: #252525;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img--handlekurv--list{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  
+}
+
+.deleteBtn--handlekurv--list{
+  background-color: #666;
+  width: 160px;
+  border-radius: 5px;
+  padding: 2px;
+  color:white;
+  text-shadow: 0px 0px 10px aqua ;
+  font-weight: 900;
+  box-shadow: 0px 0px 5px white;
+  cursor: pointer;
+
+}
+
+.deleteBtn--handlekurv--list > img{
+  margin: 0;
+}
+li{
+  text-align: start;
+  color: white;
+  width: 450px;
+  line-height: 2em;
+ 
+ 
+ 
+  
+}
+ul{
+  list-style-type: none;
+  
+}
+
+.flex{
+  border: 1px solid blue;
+  width: 72rem;
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #666;
 }
